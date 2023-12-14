@@ -1,0 +1,195 @@
+# Script MySQL de la base de datos
+
+
+
+create database db_lolworlds;
+use db_lolworlds;
+
+create table jugador(
+id_jugador int not null primary key,
+nom_jugador varchar(45) not null,
+pais_jugador varchar(45),
+fecha_nac DATE,
+cod_region int not null);
+
+create table region(
+cod_region int not null auto_increment primary key,
+nom_region varchar(45) not null,
+nom_liga varchar(6) not null,
+pais varchar(45) not null);
+
+create table competencia(
+fecha_inicio DATE not null,
+fecha_end DATE not null,
+cod_region int not null,
+nom_competencia varchar(45), primary key(fecha_inicio,fecha_end));
+
+create table equipo(
+cod_equipo int not null auto_increment primary key,
+nom_equipo varchar(45) not null,
+cod_region int not null);
+
+create table premiacion(
+cod_premiacion int not null auto_increment primary key,
+lugar int not null,
+fecha_inicio DATE not null,
+fecha_end DATE not null);
+
+create table  premiacion_has_equipo(
+cod_equipo int not null,
+cod_premiacion int not null, primary key(cod_equipo,cod_premiacion));
+
+create table locacion(
+ubicacion varchar(45) not null primary key,
+pais varchar(45),
+ciudad varchar(45));
+
+create table partido(
+fecha_partido DATE not null,
+hora_partido DATETIME not null,
+partidas_local TINYINT,
+partidas_visita TINYINT,
+tipo_partida varchar(45),
+ubicacion varchar(45), primary key(fecha_partido,hora_partido));
+
+create table campeon(
+cod_campeon int not null auto_increment primary key,
+nombre_campeon varchar(45) not null,
+tipo_campeon varchar(45));
+
+create table estadistica(
+cod_estadistica int not null auto_increment,
+cod_campeon int not null,
+id_jugador int not null,
+cantidad_oro int,
+muerte int,
+asistencia int,
+asesinato int, primary key(cod_estadistica,cod_campeon,id_jugador));
+
+create table partido_has_equipo(
+fecha_partido DATE not null,
+hora_partido DATETIME not null,
+cod_equipo int not null,
+local TINYINT not null, primary key(fecha_partido,hora_partido,cod_equipo));
+
+create table baneo(
+cod_campeon int not null,
+fecha_partido DATE not null,
+hora_partido DATETIME not null,
+cod_equipo int not null, primary key(fecha_partido,hora_partido,cod_equipo,cod_campeon));
+
+create table partido_has_estadistica(
+fecha_partido DATE not null,
+hora_partido DATETIME not null,
+cod_estadistica int not null,
+cod_campeon int not null,
+id_jugador int not null, primary key(fecha_partido,hora_partido,cod_estadistica,cod_campeon,id_jugador));
+
+create table hechizo(
+cod_hechizo int not null auto_increment primary key,
+des_hechizo varchar(15) not null);
+
+create table hechizo_estadistica(
+cod_estadistica int not null,
+cod_campeon int not null,
+id_jugador int not null,
+cod_hechizo int not null, primary key(cod_estadistica,cod_campeon,id_jugador,cod_hechizo));
+
+alter table competencia add
+     constraint fk_region_competencia 
+     foreign key(cod_region)
+     references region(cod_region);
+
+alter table premiacion add
+constraint fk_competencia_premiacion
+foreign key(fecha_inicio,fecha_end)
+references competencia(fecha_inicio,fecha_end);
+
+alter table equipo add
+constraint fk_region_equipo
+foreign key(cod_region)
+references region(cod_region);
+
+alter table premiacion_has_equipo add
+constraint fk_prem_equipo_equipo
+foreign key(cod_equipo)
+references equipo(cod_equipo);
+
+alter table premiacion_has_equipo add
+constraint fk_prem_eqipo_premiacion
+foreign key(cod_premiacion)
+references premiacion(cod_premiacion);
+
+alter table partido add
+constraint fk_partido_locaion
+foreign key(ubicacion)
+references locacion(ubicacion);
+
+alter table jugador add
+constraint fk_jugador_region
+foreign key(cod_region)
+references region(cod_region);
+
+alter table jugador add
+cod_equipo int not null;
+
+alter table jugador add
+constraint fk_jugador_equipo
+foreign key(cod_equipo)
+references equipo(cod_equipo);
+
+alter table estadistica add 
+constraint fk_est_campeon
+foreign key(cod_campeon)
+references campeon(cod_campeon);
+
+alter table estadistica add 
+constraint fk_est_jugador
+foreign key(id_jugador)
+references jugador(id_jugador);
+
+alter table hechizo_estadistica add
+constraint fk_hechizo_est_est 
+foreign key(cod_estadistica,cod_campeon,id_jugador)
+references estadistica(cod_estadistica,cod_campeon,id_jugador);
+
+alter table hechizo_estadistica add
+constraint fk_hechizo_est_hechizo
+foreign key(cod_hechizo)
+references hechizo(cod_hechizo);
+
+alter table partido_has_estadistica add
+constraint fk_partido_est_est
+foreign key(cod_estadistica,cod_campeon,id_jugador)
+references  estadistica(cod_estadistica,cod_campeon,id_jugador);
+
+alter table partido_has_estadistica add
+constraint fk_partido_est_partido
+foreign key(fecha_partido,hora_partido)
+references partido(fecha_partido,hora_partido);
+
+alter table partido_has_equipo add
+constraint fk_partido_equipo_partido
+foreign key(fecha_partido,hora_partido)
+references  partido(fecha_partido,hora_partido);
+
+
+alter table partido_has_equipo add
+constraint fk_partido_equipo_equipo
+foreign key(cod_equipo)
+references  equipo(cod_equipo);
+
+alter table baneo add
+constraint fk_baneo_partido_has_equipo
+foreign key (fecha_partido,hora_partido,cod_equipo)
+references partido_has_equipo(fecha_partido,hora_partido,cod_equipo);
+
+alter table baneo add
+constraint fk_baneo_campeon
+foreign key(cod_campeon)
+references campeon(cod_campeon)
+
+
+#   alter table premiacion drop foreign key fk_competencia;
+ ## drop database db_lolworlds;
+ # drop table equipo;
