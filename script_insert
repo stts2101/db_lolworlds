@@ -1,4 +1,4 @@
-# Insert en MySQL
+  # Insert en MySQL
 
 insert into region(cod_region,nom_region,nom_liga,pais) values('1','KR','LCK','Korea');
 insert into region(cod_region,nom_region,nom_liga,pais) values('2','CN','LPL','China');
@@ -35,3 +35,405 @@ insert into equipo(cod_equipo,nom_equipo,cod_region) values('22','⁠DetonatioN 
 
 insert into competencia(fecha_inicio,fecha_end,cod_region,nom_competencia) values('2023-10-10','2023-11-19','1','Worlds 2023');
 insert into competencia(fecha_inicio,fecha_end,cod_region,nom_competencia) values('2022-09-29','2022-11-05','4','Worlds 2022');
+
+#### regiones   #####
+insert into region(cod_region,nom_region,nom_liga,pais) values('1','KR','LCK','Korea');
+insert into region(cod_region,nom_region,nom_liga,pais) values('2','CN','LPL','China');
+insert into region(cod_region,nom_region,nom_liga,pais) values('3','EMEA','LEC','Europe');
+insert into region(cod_region,nom_region,nom_liga,pais) values('4','NA','LCS','NorthAmerica');
+insert into region(cod_region,nom_region,nom_liga,pais) values('5','PCS','PCS','Pacific');
+insert into region(cod_region,nom_region,nom_liga,pais) values('6','VN','VCS','Vietnam');
+insert into region(cod_region,nom_region,nom_liga,pais) values('7','JP','LJL','Japan');
+insert into region(cod_region,nom_region,nom_liga,pais) values('8','BR','CBLOL ','Brazil');
+insert into region(cod_region,nom_region,nom_liga,pais) values('9','LAT','LLA','Latin America');
+
+
+
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('1','⁠T1','1');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('2','⁠Weibo Gaming ⁠','2');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('3','⁠Bilibili Gaming ⁠','2');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('4','⁠JD Gaming ','2');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('5','⁠NRG ⁠','4');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('6','⁠Gen.G ⁠','1');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('7','⁠KT Rolster','1');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('8','⁠LNG Esports ⁠','2');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('9','⁠Dplus KIA ⁠','1');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('10','⁠Fnatic ⁠','3');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('11','⁠G2 Esports ','3');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('12','⁠Cloud9 ⁠','4');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('13','⁠MAD Lions ','3');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('14','⁠GAM Esports','6');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('15','⁠Team Liquid ⁠','4');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('16','⁠Team BDS ','3');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('17','⁠Team Whales ','6');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('18','⁠PSG Talon ⁠','5');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('19','⁠LOUD ','8');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('20','⁠CTBC Flying Oyster ⁠','5');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('21','⁠Movistar R7 ⁠','9');
+insert into equipo(cod_equipo,nom_equipo,cod_region) values('22','⁠DetonatioN FocusMe ⁠','7');  
+
+insert into competencia(fecha_inicio,fecha_end,cod_region,nom_competencia) values('2023-10-10','2023-11-19','1','Worlds 2023');
+insert into competencia(fecha_inicio,fecha_end,cod_region,nom_competencia) values('2022-09-29','2022-11-05','4','Worlds 2022');
+
+
+
+
+select a.nom_liga 'total_regiones' from region a;
+
+select a.nom_equipo 'total_regiones' from equipo a;
+
+select a.nom_competencia 'nombre campeonatos' from competencia a;
+
+
+####    campeones   #####
+insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('1','Aatrox the Darkin Blade','Burst');
+
+
+
+insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('1','Aatroxthe Darkin Blade','Burst');
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('2','Ahri
+the Nine-Tailed Fox','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('3','Akali
+the Rogue Assassin','Marksman
+Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('4','Akshan
+the Rogue Sentinel','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('5','Alistar
+the Minotaur','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('6','Amumu
+the Sad Mummy','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('7','Anivia
+the Cryophoenix','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('8','Annie
+the Dark Child','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('9','Aphelios
+the Weapon of the Faithful','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('10','Ashe
+the Frost Archer','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('11','Aurelion Sol
+The Star Forger','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('12','Azir
+the Emperor of the Sands','Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('13','Bard
+the Wandering Caretaker','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('14','BelVeth
+the Empress of the Void','Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('15','Blitzcrank
+the Great Steam Golem','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('16','Brand
+the Burning Vengeance','Warden'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('17','Braum
+the Heart of the Freljord','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('18','Briar
+the Restrained Hunger','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('19','Caitlyn
+the Sheriff of Piltover','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('20','Camille
+the Steel Shadow','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('21','Cassiopeia
+the Serpents Embrace','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('22','Cho'Gath
+the Terror of the Void','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('23','Corki
+the Daring Bombardier','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('24','Darius
+the Hand of Noxus','Assassin
+Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('25','Diana
+Scorn of the Moon','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('26','Dr. Mundo
+the Madman of Zaun','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('27','Draven
+the Glorious Executioner','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('28','Ekko
+the Boy Who Shattered Time','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('29','Elise
+the Spider Queen','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('30','Evelynn
+Agony's Embrace','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('31','Ezreal
+the Prodigal Explorer','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('32','Fiddlesticks
+the Ancient Fear','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('33','Fiora
+the Grand Duelist','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('34','Fizz
+the Tidal Trickster','Warden'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('35','Galio
+the Colossus','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('36','Gangplank
+the Saltwater Scourge','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('37','Garen
+The Might of Demacia','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('38','Gnar
+the Missing Link','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('39','Gragas
+the Rabble Rouser','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('40','Graves
+the Outlaw','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('41','Gwen
+The Hallowed Seamstress','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('42','Hecarim
+the Shadow of War','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('43','Heimerdinger
+the Revered Inventor','Artillery'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('44','Hwei
+the Visionary','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('45','Illaoi
+the Kraken Priestess','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('46','Irelia
+the Blade Dancer','Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('47','Ivern
+the Green Father','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('48','Janna
+the Storm's Fury','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('49','Jarvan IV
+the Exemplar of Demacia','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('50','Jax
+Grandmaster at Arms','Artillery'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('51','Jayce
+the Defender of Tomorrow','Marksman
+Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('52','Jhin
+the Virtuoso','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('53','Jinx
+the Loose Cannon','Warden
+Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('54','K'Sante
+The Pride of Nazumah','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('55','Kai'Sa
+Daughter of the Void','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('56','Kalista
+the Spear of Vengeance','Burst
+Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('57','Karma
+the Enlightened One','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('58','Karthus
+the Deathsinger','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('59','Kassadin
+the Void Walker','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('60','Katarina
+the Sinister Blade','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('61','Kayle
+the Righteous','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('62','Kayn
+the Shadow Reaper','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('63','Kennen
+the Heart of the Tempest','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('64','Kha'Zix
+the Voidreaver','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('65','Kindred
+The Eternal Hunters','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('66','Kled
+the Cantankerous Cavalier','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('67','Kog'Maw
+the Mouth of the Abyss','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('68','LeBlanc
+the Deceiver','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('69','Lee Sin
+the Blind Monk','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('70','Leona
+the Radiant Dawn','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('71','Lillia
+the Bashful Bloom','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('72','Lissandra
+the Ice Witch','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('73','Lucian
+the Purifier','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('74','Lulu
+the Fae Sorceress','Burst
+Artillery'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('75','Lux
+the Lady of Luminosity','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('76','Malphite
+Shard of the Monolith','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('77','Malzahar
+the Prophet of the Void','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('78','Maokai
+the Twisted Treant','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('79','Master Yi
+the Wuju Bladesman','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('80','Milio
+The Gentle Flame','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('81','Miss Fortune
+the Bounty Hunter','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('82','Mordekaiser
+the Iron Revenant','Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('83','Morgana
+the Fallen','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('84','Naafiri
+The Hound of a Hundred Bites','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('85','Nami
+the Tidecaller','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('86','Nasus
+the Curator of the Sands','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('87','Nautilus
+the Titan of the Depths','Burst
+Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('88','Neeko
+the Curious Chameleon','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('89','Nidalee
+the Bestial Huntress','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('90','Nilah
+the Joy Unbound','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('91','Nocturne
+the Eternal Nightmare','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('92','Nunu & Willump
+the Boy and His Yeti','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('93','Olaf
+the Berserker','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('94','Orianna
+the Lady of Clockwork','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('95','Ornn
+The Fire below the Mountain','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('96','Pantheon
+the Unbreakable Spear','Warden'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('97','Poppy
+Keeper of the Hammer','Assassin
+Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('98','Pyke
+the Bloodharbor Ripper','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('99','Qiyana
+Empress of the Elements','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('100','Quinn
+Demacia's Wings','Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('101','Rakan
+The Charmer','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('102','Rammus
+the Armordillo','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('103','Rek'Sai
+the Void Burrower','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('104','Rell
+the Iron Maiden','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('105','Renata Glasc
+the Chem-Baroness','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('106','Renekton
+the Butcher of the Sands','Assassin
+Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('107','Rengar
+the Pridestalker','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('108','Riven
+the Exile','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('109','Rumble
+the Mechanized Menace','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('110','Ryze
+the Rune Mage','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('111','Samira
+the Desert Rose','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('112','Sejuani
+Fury of the North','Marksman
+Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('113','Senna
+the Redeemer','Burst
+Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('114','Seraphine
+the Starry-Eyed Songstress','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('115','Sett
+the Boss','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('116','Shaco
+the Demon Jester','Warden'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('117','Shen
+the Eye of Twilight','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('118','Shyvana
+the Half-Dragon','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('119','Singed
+the Mad Chemist','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('120','Sion
+The Undead Juggernaut','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('121','Sivir
+the Battle Mistress','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('122','Skarner
+the Crystal Vanguard','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('123','Sona
+Maven of the Strings','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('124','Soraka
+the Starchild','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('125','Swain
+the Noxian Grand General','Burst
+Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('126','Sylas
+the Unshackled','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('127','Syndra
+the Dark Sovereign','Warden'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('128','Tahm Kench
+The River King','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('129','Taliyah
+the Stoneweaver','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('130','Talon
+the Blade's Shadow','Enchanter
+Warden'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('131','Taric
+the Shield of Valoran','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('132','Teemo
+the Swift Scout','Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('133','Thresh
+the Chain Warden','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('134','Tristana
+the Yordle Gunner','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('135','Trundle
+the Troll King','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('136','Tryndamere
+the Barbarian King','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('137','Twisted Fate
+the Card Master','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('138','Twitch
+the Plague Rat','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('139','Udyr
+the Spirit Walker','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('140','Urgot
+the Dreadnought','Marksman
+Artillery'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('141','Varus
+the Arrow of Retribution','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('142','Vayne
+the Night Hunter','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('143','Veigar
+the Tiny Master of Evil','Artillery'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('144','Vel'Koz
+the Eye of the Void','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('145','Vex
+the Gloomist','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('146','Vi
+the Piltover Enforcer','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('147','Viego
+The Ruined King','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('148','Viktor
+the Machine Herald','Battlemage'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('149','Vladimir
+the Crimson Reaper','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('150','Volibear
+the Relentless Storm','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('151','Warwick
+the Uncaged Wrath of Zaun','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('152','Wukong
+the Monkey King','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('153','Xayah
+the Rebel','Artillery'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('154','Xerath
+the Magus Ascendant','Diver'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('155','Xin Zhao
+the Seneschal of Demacia','Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('156','Yasuo
+the Unforgiven','Assassin
+Skirmisher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('157','Yone
+the Unforgotten','Juggernaut'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('158','Yorick
+Shepherd of Souls','Enchanter'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('159','Yuumi
+the Magical Cat','Vanguard'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('160','Zac
+the Secret Weapon','Assassin'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('161','Zed
+the Master of Shadows','Marksman'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('162','Zeri
+The Spark of Zaun','Artillery'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('163','Ziggs
+the Hexplosives Expert','Specialist'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('164','Zilean
+the Chronokeeper','Burst'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('165','Zoe
+the Aspect of Twilight','Catcher'); 
+ insert into campeon(cod_campeon,nombre_campeon,tipo_campeon) values('0','Zyra
+Rise of the Thorns',''); 
+
